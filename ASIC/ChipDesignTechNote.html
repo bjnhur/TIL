@@ -1,0 +1,323 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>칩 설계 기술자료 정리 &mdash; Bong&#39;s TIL  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Welcome to Bong’s TIL’s documentation!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Bong's TIL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">TIL</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">칩 설계 기술자료 정리</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#asic">ASIC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hdl">HDL</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#verilog">Verilog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vhdl">VHDL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etc">Etc</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#eda-tool-synopsys-cadence">EDA Tool (Synopsys, Cadence)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#synopsys-design-compier">Synopsys Design Compier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#synopsys-vcs">Synopsys VCS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">반도체 일반</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Bong's TIL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>칩 설계 기술자료 정리</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ASIC/ChipDesignTechNote.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>:orphan:
+:tocdepth: 2</p>
+<div class="section" id="id1">
+<h1>칩 설계 기술자료 정리<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>=====================
+(Last modified) 2019-01-16</p>
+<div class="section" id="asic">
+<h2>ASIC<a class="headerlink" href="#asic" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.eda.ncsu.edu/wiki/Tutorial:ASIC_Design_Tutorials">ASIC Design Tutorials</a> - 위키사이트, 전체흐름을 살펴보자. 설계, FPGA, 검증.</p></li>
+<li><p><a class="reference external" href="http://www.dejazzer.com/ee478/lectures.html">HDL Based Digital Design with Programmable Logic</a> - HDL, FPGA 등 기본하드웨어 설계 강의노트</p></li>
+<li><p><a class="reference external" href="https://ts.devbj.com/571">2018-IDEC-연구원-교육 Cell-Based 설계 Flow 교육</a> - 동영상강의, 기본 칩 개발에 필요한 필수 기술들의 강의, 필수 시청!!</p></li>
+</ul>
+</div>
+<div class="section" id="hdl">
+<h2>HDL<a class="headerlink" href="#hdl" title="Permalink to this headline">¶</a></h2>
+<p>설계에 사용되는 hdl 언어(VHDL, Verilog, SystemVerilog, …) 관련 자료를 모아두자.</p>
+<div class="section" id="verilog">
+<h3>Verilog<a class="headerlink" href="#verilog" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.testbench.in/">http://www.testbench.in/</a> - 테스트 벤치, SystemVerilog ~~갑자기 접속이 안됨 ㅜㅜ~~ 접속재개 ;)</p></li>
+<li><p><a class="reference external" href="http://ts.devbj.com/226">Verilog 설계 팁</a> - IDEC 2012 한글자료</p></li>
+<li><p><a class="reference external" href="http://ts.devbj.com/210">Test bench 테스트벤치 작성 가이드</a> - 카운터예제로 정리해둔 영어자료</p></li>
+<li><p><a class="reference external" href="http://ts.devbj.com/209">VCD file</a> - Value Change Dump 파일, 소스코드에서 VCD 파일을 어떻게 만드는지 호출하는 함수들에 대한 간략한 소개</p></li>
+</ul>
+</div>
+<div class="section" id="vhdl">
+<h3>VHDL<a class="headerlink" href="#vhdl" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.vhdl-online.de/start">VHDL-Online</a> - 위키형태의 사이트처럼 되어 있으나 깔끔하게 잘 정리되어 있다. 본좌~~</p></li>
+<li><p><a class="reference external" href="http://www.physi.uni-heidelberg.de/~angelov/VHDL/">VHDL, Verilog 강의</a> - 독일대학의 강의자료 페이지</p></li>
+<li><p><a class="reference external" href="http://esd.cs.ucr.edu/labs/tutorial/">VHDL Tutorial: Learn by Example</a> - 예제를 중심, 2010 리비전된 내용.</p></li>
+<li><p><a class="reference external" href="https://www.vahana.com/examples.htm">Essential VHDL Design Examples</a> - 시간나면 하나씩 뜯어보자</p></li>
+<li><p><a class="reference external" href="http://www.cs.ucr.edu/~dalton/i8051/">8051 Synthesizable VHDL Model</a></p></li>
+<li><p><a class="reference external" href="http://www.stefanvhdl.com/vhdl/html/">VHDL verification courses</a> - verification code 를 아주 작은 예제로 처음부터 끝까지 쉽지만 꼭 따라해야함.</p></li>
+</ul>
+</div>
+<div class="section" id="etc">
+<h3>Etc<a class="headerlink" href="#etc" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>none</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="eda-tool-synopsys-cadence">
+<h2>EDA Tool (Synopsys, Cadence)<a class="headerlink" href="#eda-tool-synopsys-cadence" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://ts.devbj.com/208">EDA 툴 설치가이드</a> - DC, PrimeTime, NCVerilog, Formality 의 설치가이드 한글자료 모음 from IDEC</p></li>
+<li><p><a class="reference external" href="http://ts.devbj.com/217">How the gate count of a design is determined?</a> - 게이트카운트 구해보기 대략적으로 (간단하게 보통 NAND2 게이트 면적으로 나눠서 알아낸다.)</p></li>
+<li><p><a class="reference external" href="http://www.vlsiip.com/index.html">VLSI IP site</a> - tutorial, IP, 인터뷰 방법 소개등등 많은 자료가 잘 정리되어 있음. 아래 몇개는 링크가져옴</p>
+<ul>
+<li><p><a class="reference external" href="http://www.vlsiip.com/dc_shell">Design Compiler Tutorial and Sample Commands</a></p></li>
+<li><p><a class="reference external" href="http://www.vlsiip.com/formality">Formality Tutorial and Sample Commands</a></p></li>
+<li><p><a class="reference external" href="http://www.vlsiip.com/power">Power Analysis</a></p></li>
+<li><p><a class="reference external" href="http://www.vlsiip.com/unix">Some Frequently used Unix Commands</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="synopsys-design-compier">
+<h3>Synopsys Design Compier<a class="headerlink" href="#synopsys-design-compier" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://ts.devbj.com/438">Design Compiler 관련글</a></p>
+<ul>
+<li><p><a class="reference external" href="http://blog.naver.com/PostList.nhn?blogId=beahey&amp;from=postList&amp;categoryNo=85">Design Compiler 정리</a></p></li>
+<li><p><a class="reference external" href="http://www.donny.co.kr/">Donny님 블로그</a></p>
+<ul>
+<li><p><a class="reference external" href="http://www.donny.co.kr/simplecore/simplecore3-1.pdf">마이크로프로세서 설계 무작정 따라하기 Part-III (1회)</a></p></li>
+<li><p><a class="reference external" href="http://www.donny.co.kr/simplecore/simplecore3-2.pdf">마이크로프로세서 설계 무작정 따라하기 Part-III (2회)</a></p></li>
+<li><p><a class="reference external" href="http://www.donny.co.kr/simplecore/simplecore3-3.pdf">마이크로프로세서 설계 무작정 따라하기 Part-III (3회)</a></p></li>
+<li><p><a class="reference external" href="http://www.donny.co.kr/simplecore/simplecore3-4.pdf">마이크로프로세서 설계 무작정 따라하기 Part-III (4회)</a></p></li>
+<li><p><a class="reference external" href="http://www.donny.co.kr/simplecore/simplecore3-5.pdf">마이크로프로세서 설계 무작정 따라하기 Part-III (최종회)</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference external" href="http://ts.devbj.com/219">set_false_path/set_case_analysis</a> - 간단한 설명, 타이밍과 관련이 있지만 합성에 중요한 변수가 된다.</p></li>
+</ul>
+</div>
+<div class="section" id="synopsys-vcs">
+<h3>Synopsys VCS<a class="headerlink" href="#synopsys-vcs" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://ts.devbj.com/415">Simulating verilog VHDL using Synopsys VCS - 칩 설계 검증 툴</a></p></li>
+<li><p><a class="reference external" href="http://www.vlsiip.com/vcs/">VCS and coverage by Aviral Mittal</a> - 기초적인 내용. 정리 잘되어 있음</p></li>
+<li><p><a class="reference external" href="http://salinasv.blogspot.kr/2011/05/simulating-mixed-language-hdl-using-vcs.html">Open Masca: Simulating mixed language HDL using VCS</a> - 간략하게 굿.</p></li>
+<li><p><a class="reference external" href="http://documents.mx/documents/5-simulation-vcs.html">Simulation with VCS</a> - Synopsys 자체 자료니, 좋은 자료인듯. 원본은 어디서 찾아봐야할 듯.</p></li>
+<li><p><a class="reference external" href="http://www.csl.cornell.edu/courses/ece5745/handouts/ece5745-tut1-vcs.pdf">RTL Simulation using Synopsys VCS</a> - 2016버전, 너무 간단하지만 그냥 명령어 옵션 구경할 만함.</p></li>
+<li><p>Gate-Level Simulation With Synopsys VCS Simulator <a class="reference external" href="https://www.altera.com/content/dam/altera-www/global/en_US/pdfs/literature/hb/qts/qts_qii5v3.pdf">Synopsys VCS Support (PDF) chapter in volume 3 of the Quartus II Development Software Handbook</a> - 정말 좋은 자료. 방대한 양이 질리겠지만 타이밍,합성관련 정보가 짱</p></li>
+<li><p>연세대 한글자료 - <a class="reference external" href="http://soc.yonsei.ac.kr/class/material/dft_class/06_abist_synopsys.pdf">Mixed Signal Simulation</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>반도체 일반<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ts.devbj.com/564">반도체 패키징 공정</a></p>
+<ol class="simple">
+<li><p>Back Grinding 공정 : 전공정에서 가공된 웨이퍼의 후면을 얇게 갈아내는 공정</p></li>
+<li><p>Sawing(Dicing) 공정 : 웨이퍼를 개별 단위(net die)로 잘라내는 공정</p></li>
+<li><p>Die Attaching 공정 : 회로기판(substrate)에 칩을 붙여 고정하는 공정</p></li>
+<li><p>Wire Bonding : Gold Wire로 칩을 전기적으로 연결하는 공정</p></li>
+<li><p>Molding : EMC 물질로 칩이 실장된 기판을 감싸는 공정</p></li>
+<li><p>Marking : 레이저로 개별 제품에 제품 정보를 새기는 공정</p></li>
+<li><p>Solder Ball Mount : 회로기판에 솔더 볼을 붙여 아웃단자를 만드는 공정</p></li>
+<li><p>PKG Sawing : 모듈/보드/카드에 실장하도록 개별 반도체로 잘라내는 공정</p></li>
+</ol>
+</li>
+<li><p><a class="reference external" href="http://ts.devbj.com/425">ESD Test - HBM, MM, CDM</a></p></li>
+<li><p><a class="reference external" href="http://datasyncxml.tistory.com/118">MTBF/MTTF/MTTR</a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to Bong’s TIL’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Bongjun Hur
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
